@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Pop Up View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AlertPopUpVC" id="Y6W-OH-hqX" customClass="CustomPopUpViewController" customModule="CustomPopUp_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdj-y6-R7q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="bgBtn"/>
+                                <connections>
+                                    <action selector="onbgBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wxX-QC-0mO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-Kp-otu" userLabel="contentView">
+                                <rect key="frame" x="57" y="174" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi I'm klay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzo-id-2Sv">
+                                        <rect key="frame" x="111" y="210" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom to my Blog &amp; Github" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-aR-QUn">
+                                        <rect key="frame" x="41" y="236" width="218" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-E6-RW6">
+                                        <rect key="frame" x="175" y="263" width="110" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="D6f-Nl-dzN"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Github Link">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onGithubBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2iY-hx-Sg9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67E-GA-7Ov">
+                                        <rect key="frame" x="12" y="263" width="110" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="u2m-xu-HmU"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Blog Link">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onBlogLinkBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fbq-WQ-E3R"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2022-03-28-00-21-24 003" translatesAutoresizingMaskIntoConstraints="NO" id="ANB-y3-8YU">
+                                        <rect key="frame" x="50" y="5" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="HKo-SD-HXr"/>
+                                            <constraint firstAttribute="width" constant="200" id="hh3-zU-SXF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="67E-GA-7Ov" secondAttribute="bottom" constant="5" id="8Ak-vA-aDF"/>
+                                    <constraint firstItem="Pzo-id-2Sv" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="BDr-0B-eir"/>
+                                    <constraint firstItem="67E-GA-7Ov" firstAttribute="leading" secondItem="Bpt-Kp-otu" secondAttribute="leading" constant="12" id="DgG-VZ-iVK"/>
+                                    <constraint firstAttribute="trailing" secondItem="cLg-E6-RW6" secondAttribute="trailing" constant="15" id="Zk2-KT-Omk"/>
+                                    <constraint firstItem="ANB-y3-8YU" firstAttribute="top" secondItem="Bpt-Kp-otu" secondAttribute="top" constant="5" id="amg-Q4-O2a"/>
+                                    <constraint firstAttribute="width" constant="300" id="e12-lU-g2V"/>
+                                    <constraint firstItem="rdB-aR-QUn" firstAttribute="top" secondItem="Pzo-id-2Sv" secondAttribute="bottom" constant="5" id="rZG-jm-nDn"/>
+                                    <constraint firstItem="ANB-y3-8YU" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="rci-hk-dOk"/>
+                                    <constraint firstItem="rdB-aR-QUn" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="v7D-ix-Fwk"/>
+                                    <constraint firstAttribute="bottom" secondItem="cLg-E6-RW6" secondAttribute="bottom" constant="5" id="vx1-jN-NJh"/>
+                                    <constraint firstItem="Pzo-id-2Sv" firstAttribute="top" secondItem="ANB-y3-8YU" secondAttribute="bottom" constant="5" id="xfc-3K-Dsf"/>
+                                    <constraint firstAttribute="height" constant="300" id="yNE-07-P0E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vdj-y6-R7q" secondAttribute="bottom" id="5oE-Q8-8cN"/>
+                            <constraint firstItem="vdj-y6-R7q" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="FOE-1O-GFb"/>
+                            <constraint firstItem="Bpt-Kp-otu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Fim-m1-fbV"/>
+                            <constraint firstItem="vdj-y6-R7q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UOo-JY-d84"/>
+                            <constraint firstItem="vdj-y6-R7q" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="n8D-80-xNa"/>
+                            <constraint firstItem="Bpt-Kp-otu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="130" id="rKg-Yd-dpP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BlogBtn" destination="67E-GA-7Ov" id="zf9-4C-f30"/>
+                        <outlet property="GithubBtn" destination="cLg-E6-RW6" id="A4p-tc-uW9"/>
+                        <outlet property="bgBtn" destination="vdj-y6-R7q" id="oZn-rB-D8B"/>
+                        <outlet property="contentView" destination="Bpt-Kp-otu" id="5dX-Ya-jS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="KakaoTalk_Photo_2022-03-28-00-21-24 003" width="592" height="540"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
