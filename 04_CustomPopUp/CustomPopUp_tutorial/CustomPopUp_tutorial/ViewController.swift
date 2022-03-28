@@ -8,7 +8,9 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PopUpDelegate{
+   
+    
 
     // 깃허브 링크를 연결할 인스턴스
     @IBOutlet weak var myGithubView: WKWebView!
@@ -41,19 +43,26 @@ class ViewController: UIViewController {
             let myBlogUrl = URL(string: "https://blog.naver.com/qkrdydpyc")
             self.myBlogView.load(URLRequest(url:myBlogUrl!))
         }
-        
+        //self는 뷰컨트롤러에서 받은 팝업델리게이트, 인스턴스인 커스텀팝업VC에서 팝업델리게이트와 연결해주는것
+        customPopUpVC.myPopUpDelegate = self
+        /*
         customPopUpVC.GithubBtnCompletionClosure = {
             print("GithubBtnCompletionClosure called by popupVC")
             let myGithubUrl = URL(string: "https://github.com/pycqkrdyd/MyFirstiOS")
             self.myGithubView.load(URLRequest(url:myGithubUrl!))
-        }
+        }*/
         
         //다른 뷰 컨트롤러를 보여주는것 내비컨트롤러는 스택이 쌓이는거고 프레젠트는 위에서 바로 보여주는 식으로 조금 다른 구조
         //어떤것을 보여줄지? -> 위에서 생성한 alertPopUpVC, 애니메이션은? -> true, 다 보여주고 나서는 뭔가 할건지? -> 안함 nil
         self.present(customPopUpVC, animated: true, completion: nil)
     }
    
-
+    //MARK: - PopUpDelegate methods
+    func onGithubBtnClicked() {
+        print("ViewController - onGithubBtnClicked() called")
+        let myGithubUrl = URL(string: "https://github.com/pycqkrdyd/MyFirstiOS")
+        self.myGithubView.load(URLRequest(url:myGithubUrl!))
+    }
     
 }
 

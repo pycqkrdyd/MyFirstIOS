@@ -28,47 +28,52 @@
                                 <rect key="frame" x="57" y="174" width="300" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi I'm klay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzo-id-2Sv">
-                                        <rect key="frame" x="111" y="210" width="78" height="21"/>
+                                        <rect key="frame" x="111" y="210" width="78" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom to my Blog &amp; Github" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-aR-QUn">
-                                        <rect key="frame" x="41" y="236" width="218" height="21"/>
+                                        <rect key="frame" x="41" y="235.5" width="218" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-E6-RW6">
-                                        <rect key="frame" x="175" y="263" width="110" height="32"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="D6f-Nl-dzN"/>
-                                        </constraints>
-                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Github Link">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="onGithubBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2iY-hx-Sg9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67E-GA-7Ov">
-                                        <rect key="frame" x="12" y="263" width="110" height="32"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="u2m-xu-HmU"/>
-                                        </constraints>
-                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Blog Link">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="onBlogLinkBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fbq-WQ-E3R"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="xNP-RX-ix8">
+                                        <rect key="frame" x="13.5" y="263" width="273" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67E-GA-7Ov">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="32"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="u2m-xu-HmU"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Blog Link">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onBlogLinkBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fbq-WQ-E3R"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-E6-RW6">
+                                                <rect key="frame" x="163" y="0.0" width="110" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="D6f-Nl-dzN"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Github Link">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onGithubBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2iY-hx-Sg9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2022-03-28-00-21-24 003" translatesAutoresizingMaskIntoConstraints="NO" id="ANB-y3-8YU">
                                         <rect key="frame" x="50" y="5" width="200" height="200"/>
                                         <constraints>
@@ -79,17 +84,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="67E-GA-7Ov" secondAttribute="bottom" constant="5" id="8Ak-vA-aDF"/>
                                     <constraint firstItem="Pzo-id-2Sv" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="BDr-0B-eir"/>
-                                    <constraint firstItem="67E-GA-7Ov" firstAttribute="leading" secondItem="Bpt-Kp-otu" secondAttribute="leading" constant="12" id="DgG-VZ-iVK"/>
-                                    <constraint firstAttribute="trailing" secondItem="cLg-E6-RW6" secondAttribute="trailing" constant="15" id="Zk2-KT-Omk"/>
                                     <constraint firstItem="ANB-y3-8YU" firstAttribute="top" secondItem="Bpt-Kp-otu" secondAttribute="top" constant="5" id="amg-Q4-O2a"/>
                                     <constraint firstAttribute="width" constant="300" id="e12-lU-g2V"/>
+                                    <constraint firstItem="xNP-RX-ix8" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="ioj-AV-BnT"/>
                                     <constraint firstItem="rdB-aR-QUn" firstAttribute="top" secondItem="Pzo-id-2Sv" secondAttribute="bottom" constant="5" id="rZG-jm-nDn"/>
                                     <constraint firstItem="ANB-y3-8YU" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="rci-hk-dOk"/>
                                     <constraint firstItem="rdB-aR-QUn" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="v7D-ix-Fwk"/>
-                                    <constraint firstAttribute="bottom" secondItem="cLg-E6-RW6" secondAttribute="bottom" constant="5" id="vx1-jN-NJh"/>
                                     <constraint firstItem="Pzo-id-2Sv" firstAttribute="top" secondItem="ANB-y3-8YU" secondAttribute="bottom" constant="5" id="xfc-3K-Dsf"/>
+                                    <constraint firstAttribute="bottom" secondItem="xNP-RX-ix8" secondAttribute="bottom" constant="5" id="xrL-M4-Fxt"/>
                                     <constraint firstAttribute="height" constant="300" id="yNE-07-P0E"/>
                                 </constraints>
                             </view>

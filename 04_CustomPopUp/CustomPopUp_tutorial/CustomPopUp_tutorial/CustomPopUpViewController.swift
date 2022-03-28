@@ -17,7 +17,8 @@ class CustomPopUpViewController: UIViewController {
     //자료형으로 구성 이부분은 추가 공부 필요
     //실행이 되면 아무것도 하지 않는다. 하지만 발생되었다면? 버튼이 눌렸다고 알려주는것 나는 버튼이 2개니까 2개를 선언했다.
     var BlogBtnCompletionClosure: (() -> Void)?
-    var GithubBtnCompletionClosure: (() -> Void)?
+    //var GithubBtnCompletionClosure: (() -> Void)?
+    var myPopUpDelegate : PopUpDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class CustomPopUpViewController: UIViewController {
     
     //배경 버튼 터치 시 일어나는 액션
     @IBAction func onbgBtnClicked(_ sender: Any) {
-        print("onbgBtnClicked - onbgBtnClicked() called")
+        print("CumtomPopUpViewController - onbgBtnClicked() called")
         //dismiss는 현재 창을 닫아주는 의미, 닫아주고 그후에는 아무것도 하지 않음
         self.dismiss(animated: true, completion: nil)
     }
@@ -47,15 +48,22 @@ class CustomPopUpViewController: UIViewController {
         }
     }
     
+    /*
     @IBAction func onGithubBtnClicked(_ sender: UIButton) {
-        print("onGithubBtnClicked - onGithubBtnClicked() called")
+        print("CumtomPopUpViewController - onGithubBtnClicked() called")
         //창을 지우고
         self.dismiss(animated: true, completion: nil)
         //컴프레션 블럭을 호출
         if let GithubBtnCompletionClosure = GithubBtnCompletionClosure {
-            
+            // 메인에 알린다.
             GithubBtnCompletionClosure()
         }
-    }
     
+    }*/
+    @IBAction func onGithubBtnClicked(_ sender: UIButton) {
+        print("CumtomPopUpViewController - onGithubBtnClicked() called")
+        //버튼을 클릭한다.
+        myPopUpDelegate?.onGithubBtnClicked()
+        self.dismiss(animated: true, completion: nil)
+    }
 }
