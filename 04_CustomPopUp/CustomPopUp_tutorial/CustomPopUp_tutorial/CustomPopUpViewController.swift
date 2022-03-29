@@ -14,6 +14,8 @@ class CustomPopUpViewController: UIViewController {
     @IBOutlet weak var GithubBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
     
+    @IBOutlet weak var PortfolioBtn: UIButton!
+    
     //자료형으로 구성 이부분은 추가 공부 필요
     //실행이 되면 아무것도 하지 않는다. 하지만 발생되었다면? 버튼이 눌렸다고 알려주는것 나는 버튼이 2개니까 2개를 선언했다.
     var BlogBtnCompletionClosure: (() -> Void)?
@@ -28,6 +30,14 @@ class CustomPopUpViewController: UIViewController {
         contentView.layer.cornerRadius = 20
         BlogBtn.layer.cornerRadius = 10
         GithubBtn.layer.cornerRadius = 10
+        PortfolioBtn.layer.cornerRadius = 10
+    }
+    //MARK: - IBAction
+    
+    @IBAction func onPortfolioBtnClicked(_ sender: UIButton) {
+        print("CumtomPopUpViewController - onPortfolioBtnClicked() called")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     //배경 버튼 터치 시 일어나는 액션

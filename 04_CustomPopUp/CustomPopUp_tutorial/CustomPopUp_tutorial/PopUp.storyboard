@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +26,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-Kp-otu" userLabel="contentView">
-                                <rect key="frame" x="57" y="174" width="300" height="300"/>
+                                <rect key="frame" x="57" y="174" width="300" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi I'm klay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzo-id-2Sv">
                                         <rect key="frame" x="111" y="210" width="78" height="20.5"/>
@@ -34,13 +35,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom to my Blog &amp; Github" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-aR-QUn">
-                                        <rect key="frame" x="41" y="235.5" width="218" height="20.5"/>
+                                        <rect key="frame" x="41" y="233.5" width="218" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="xNP-RX-ix8">
-                                        <rect key="frame" x="13.5" y="263" width="273" height="32"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2022-03-28-00-21-24 003" translatesAutoresizingMaskIntoConstraints="NO" id="ANB-y3-8YU">
+                                        <rect key="frame" x="50" y="5" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="HKo-SD-HXr"/>
+                                            <constraint firstAttribute="width" constant="200" id="hh3-zU-SXF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pFo-3X-Eeo">
+                                        <rect key="frame" x="95" y="279" width="110" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67E-GA-7Ov">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="32"/>
@@ -58,7 +66,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-E6-RW6">
-                                                <rect key="frame" x="163" y="0.0" width="110" height="32"/>
+                                                <rect key="frame" x="0.0" y="42" width="110" height="32"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="D6f-Nl-dzN"/>
@@ -72,28 +80,47 @@
                                                     <action selector="onGithubBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2iY-hx-Sg9"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-I3-HnD">
+                                                <rect key="frame" x="0.0" y="84" width="110" height="32"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="Ppl-nm-n67"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Portfolio">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onPortfolioBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TPG-H1-2YP"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KakaoTalk_Photo_2022-03-28-00-21-24 003" translatesAutoresizingMaskIntoConstraints="NO" id="ANB-y3-8YU">
-                                        <rect key="frame" x="50" y="5" width="200" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="HKo-SD-HXr"/>
-                                            <constraint firstAttribute="width" constant="200" id="hh3-zU-SXF"/>
-                                        </constraints>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Also you can see my portfolio " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fT-Aq-2lD">
+                                        <rect key="frame" x="36" y="257" width="228" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Pzo-id-2Sv" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="BDr-0B-eir"/>
+                                    <constraint firstItem="rdB-aR-QUn" firstAttribute="top" secondItem="Pzo-id-2Sv" secondAttribute="bottom" constant="3" id="BHS-NN-24Q"/>
+                                    <constraint firstItem="Pzo-id-2Sv" firstAttribute="top" secondItem="ANB-y3-8YU" secondAttribute="bottom" id="CMb-zg-rTW"/>
+                                    <constraint firstAttribute="height" constant="400" id="LfG-za-WZQ"/>
+                                    <constraint firstItem="rdB-aR-QUn" firstAttribute="top" secondItem="Pzo-id-2Sv" secondAttribute="bottom" constant="3" id="R2B-P4-Uc2"/>
+                                    <constraint firstItem="7fT-Aq-2lD" firstAttribute="top" secondItem="rdB-aR-QUn" secondAttribute="bottom" constant="3" id="RfZ-X5-NuU"/>
+                                    <constraint firstAttribute="bottom" secondItem="pFo-3X-Eeo" secondAttribute="bottom" constant="5" id="a6l-jg-X3j"/>
                                     <constraint firstItem="ANB-y3-8YU" firstAttribute="top" secondItem="Bpt-Kp-otu" secondAttribute="top" constant="5" id="amg-Q4-O2a"/>
+                                    <constraint firstItem="pFo-3X-Eeo" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="bKg-Xv-CLi"/>
                                     <constraint firstAttribute="width" constant="300" id="e12-lU-g2V"/>
-                                    <constraint firstItem="xNP-RX-ix8" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="ioj-AV-BnT"/>
-                                    <constraint firstItem="rdB-aR-QUn" firstAttribute="top" secondItem="Pzo-id-2Sv" secondAttribute="bottom" constant="5" id="rZG-jm-nDn"/>
+                                    <constraint firstItem="7fT-Aq-2lD" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="eCY-bz-pmw"/>
+                                    <constraint firstItem="7fT-Aq-2lD" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="h8r-1v-y8o"/>
                                     <constraint firstItem="ANB-y3-8YU" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="rci-hk-dOk"/>
                                     <constraint firstItem="rdB-aR-QUn" firstAttribute="centerX" secondItem="Bpt-Kp-otu" secondAttribute="centerX" id="v7D-ix-Fwk"/>
                                     <constraint firstItem="Pzo-id-2Sv" firstAttribute="top" secondItem="ANB-y3-8YU" secondAttribute="bottom" constant="5" id="xfc-3K-Dsf"/>
-                                    <constraint firstAttribute="bottom" secondItem="xNP-RX-ix8" secondAttribute="bottom" constant="5" id="xrL-M4-Fxt"/>
-                                    <constraint firstAttribute="height" constant="300" id="yNE-07-P0E"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -111,6 +138,7 @@
                     <connections>
                         <outlet property="BlogBtn" destination="67E-GA-7Ov" id="zf9-4C-f30"/>
                         <outlet property="GithubBtn" destination="cLg-E6-RW6" id="A4p-tc-uW9"/>
+                        <outlet property="PortfolioBtn" destination="VHe-I3-HnD" id="gZh-qK-WZS"/>
                         <outlet property="bgBtn" destination="vdj-y6-R7q" id="oZn-rB-D8B"/>
                         <outlet property="contentView" destination="Bpt-Kp-otu" id="5dX-Ya-jS6"/>
                     </connections>
@@ -122,6 +150,9 @@
     </scenes>
     <resources>
         <image name="KakaoTalk_Photo_2022-03-28-00-21-24 003" width="592" height="540"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

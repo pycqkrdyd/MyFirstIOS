@@ -8,6 +8,9 @@
 import UIKit
 import WebKit
 
+//노티 상수 설정
+let notificationName = "btnClickNotification"
+
 class ViewController: UIViewController, PopUpDelegate{
    
     
@@ -18,10 +21,30 @@ class ViewController: UIViewController, PopUpDelegate{
     @IBOutlet weak var myBlogView: WKWebView!
     // 팝업 버튼 자체의 의미
     @IBOutlet weak var createPopUpBtn: UIButton!
+    //노티피케이션센터는 등록 후에는 계속 수신 상태이기 때문에 등록 해제도 필요함, 메모리에서 빠져나올 때 deinit을 사용 아니면 계속 메모리를 사용
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //뷰디드로드가 호출이 될 때(메모리에 올라갈떄?) ViewController 화면에 올라갈때
+        //노티피케이션이라는 수신기 장착한다. 옵저버를 단다. (정찰) 옵저버는 자신, selector는 발동 되는 액션 뷰 컨트롤러에서 이벤트가 오면 발동 단, @objc 의미는 과거 object c 로 썼던 method
+        NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: NSNotification.Name(rawValue: notificationName), object: nil)
+    //object는 이벤트에서 값 전달까지 가능한 값임
+        
+    
+       
+    }
+    //selector에서 쓰려면 앞에 @objc를 붙여야함
+    @objc fileprivate func loadWebView() {
+        print("ViewController - loadWebView")
+        let myPortfolioUrl = URL(string: "https://drive.google.com/file/d/1Dx-yJu6KFZtaVcyobjKhjyKKWjTUGOHH/view?usp=sharing")
+        self.myBlogView.load(URLRequest(url: myPortfolioUrl!))
+        
+        
     }
     
     // 팝업 버튼 클릭했을 때 이루어지는 액션의 의미
