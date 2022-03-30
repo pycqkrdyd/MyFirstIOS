@@ -27,7 +27,7 @@ class ViewController: UIViewController, PopUpDelegate{
     }
     override func viewDidLoad() {
         
-        super.viewDidLoad()
+        super.viewDidLoad() //
         // Do any additional setup after loading the view.
         
         //뷰디드로드가 호출이 될 때(메모리에 올라갈떄?) ViewController 화면에 올라갈때
